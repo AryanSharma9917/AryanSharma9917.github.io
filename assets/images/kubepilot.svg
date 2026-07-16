@@ -1,0 +1,33 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="140" y1="90" x2="660" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.52" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FDE68A"/>
+    </linearGradient>
+    <filter id="glow" x="-40" y="-40" width="880" height="480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" rx="28" fill="url(#bg)"/>
+  <circle cx="622" cy="96" r="130" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="148" cy="318" r="140" fill="#F59E0B" fill-opacity="0.12"/>
+  <path d="M70 70H730V330H70V70Z" stroke="rgba(255,255,255,0.09)" stroke-width="2"/>
+  <path d="M110 110H690V290H110V110Z" fill="rgba(15,23,42,0.75)" stroke="rgba(255,255,255,0.08)"/>
+  <g filter="url(#glow)">
+    <path d="M400 135L470 175V245L400 285L330 245V175L400 135Z" fill="url(#accent)"/>
+    <path d="M400 135L470 175L400 215L330 175L400 135Z" fill="#E5E7EB" fill-opacity="0.14"/>
+    <path d="M330 175L400 215V285L330 245V175Z" fill="#E5E7EB" fill-opacity="0.08"/>
+    <path d="M470 175L400 215V285L470 245V175Z" fill="#E5E7EB" fill-opacity="0.05"/>
+  </g>
+  <text x="400" y="335" fill="#F8FAFC" font-family="Poppins, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" letter-spacing="2">KUBEPILOT</text>
+  <text x="400" y="364" fill="#94A3B8" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="500" text-anchor="middle">AI-powered Kubernetes copilot</text>
+</svg>
