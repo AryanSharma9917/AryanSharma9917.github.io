@@ -943,15 +943,38 @@ main {
 
 .project-item.active {
   display: block;
-  animation: scaleUp 0.25s ease forwards;
+  animation: projectReveal 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--item-index, 0) * 90ms);
 }
 
-@keyframes scaleUp {
-  0% { transform: scale(0.5); }
-  100% { transform: scale(1); }
+@keyframes projectReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a {
+  width: 100%;
+  display: block;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid var(--jet);
+  background: linear-gradient(180deg, rgba(35, 35, 37, 0.95), rgba(24, 24, 26, 0.95));
+  box-shadow: var(--shadow-2);
+  transition: transform var(--transition-1), box-shadow var(--transition-1), border-color var(--transition-1);
+}
+
+.project-item > a:hover,
+.project-item > a:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0 20px 38px hsla(0, 0%, 0%, 0.32);
+}
 
 .project-img {
   position: relative;
@@ -959,7 +982,7 @@ main {
   height: 200px;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .project-img::before {
@@ -972,6 +995,15 @@ main {
   background: transparent;
   z-index: 1;
   transition: var(--transition-1);
+}
+
+.project-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
@@ -1011,6 +1043,11 @@ main {
 
 .project-title,
 .project-category { margin-left: 10px; }
+
+.project-category {
+  margin-top: 8px;
+  line-height: 1.5;
+}
 
 .project-title {
   color: var(--white-2);
