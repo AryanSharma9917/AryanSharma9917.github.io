@@ -1,6 +1,6 @@
 export type Provenance = 'original' | 'fork' | 'contribution';
 export type ProjectStatus = 'public-demo' | 'local-demo' | 'documentation' | 'repository';
-export interface Project { id:string; name:string; description:string; tags:string[]; github:string; provenance:Provenance; status:ProjectStatus; demo?:string; video?:string; submission?:string; note?:string; }
+export interface Project { id:'kubepilot'|'codewise'|'monitoring'|'incidentzero'|'auth'|'pipeline'|'servicesync'; name:string; description:string; tags:string[]; github:string; provenance:Provenance; status:ProjectStatus; demo?:string; video?:string; submission?:string; note?:string; }
 export const projects:Project[] = [
  {id:'kubepilot',name:'KubePilot',description:'A Kubernetes operations workspace for workload evidence, runbook search, guided diagnosis and incident reports.',tags:['Python','FastAPI','Kubernetes','RAG'],github:'https://github.com/AryanSharma9917/kubepilot',provenance:'fork',status:'local-demo',note:'Fork attribution and individual changes should be reviewed before publishing.'},
  {id:'codewise',name:'Codewise CLI',description:'A Go-based DevOps command-line tool for container scaffolding, Kubernetes deployment, Helm workflows and deployment diagnostics.',tags:['Go','Docker','Kubernetes','Helm'],github:'https://github.com/AryanSharma9917/Codewise-CLI',provenance:'original',status:'repository'},
