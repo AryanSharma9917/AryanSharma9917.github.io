@@ -1,5 +1,5 @@
 const experience = [
-  { period: '2024 — Present', role: 'Associate Software Engineer', company: 'Accenture · Gurugram', items: ['Build backend services and semantic retrieval pipelines.', 'Work with secure Azure OpenAI integrations and supporting application services.'] },
+  { period: '2024 — Present', role: 'Software Engineer', company: 'Accenture · Gurugram', items: ['Build backend services and semantic retrieval pipelines.', 'Work with secure Azure OpenAI integrations and supporting application services.'] },
   { period: '2023 — 2024', role: 'DevOps Engineer', company: 'Fintricity · Remote', items: ['Worked on cloud deployments across AWS and Azure.', 'Built infrastructure and delivery workflows with Terraform and Kubernetes.'] },
 ];
 
