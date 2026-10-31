@@ -1,0 +1,143 @@
+.project-card {
+  transition: transform .24s, border-color .24s, box-shadow .24s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 48px #00000038;
+}
+
+.project-visual,
+.project-card.featured .project-visual {
+  position: relative;
+  display: block;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+  background: #141517;
+  border-bottom: 1px solid #ffffff10;
+}
+
+.project-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  transform: scale(1.002);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+
+.project-card:hover .project-visual svg {
+  transform: scale(1.018);
+}
+
+.visual-sheen {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 15%, #ffffff08 45%, transparent 66%);
+  transform: translateX(-110%);
+  transition: transform .65s ease;
+}
+
+.project-card:hover .visual-sheen {
+  transform: translateX(110%);
+}
+
+.visual-disclaimer {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  z-index: 2;
+  padding: 5px 8px;
+  border: 1px solid #ffffff14;
+  border-radius: 999px;
+  background: #111214d9;
+  color: #a1a3a8;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 5px 18px #00000038;
+}
+
+.avatar {
+  color: transparent;
+  background-color: #211e1a;
+  background-image: url('../assets/images/my-avatar.png');
+  background-position: center 42%;
+  background-size: 148%;
+  background-repeat: no-repeat;
+  border: 1px solid #e6ad5638;
+  box-shadow: inset 0 0 0 1px #00000024, 0 8px 22px #00000030;
+}
+
+.pv-panel { fill: #17181b; stroke: #ffffff12; stroke-width: 2; }
+.pv-card { fill: #1c1d20; stroke: #ffffff12; stroke-width: 1.5; }
+.pv-well { fill: #111214; stroke: #ffffff10; stroke-width: 1.5; }
+.pv-rule { stroke: #ffffff12; stroke-width: 1.5; }
+.pv-grid-line { stroke: #ffffff0e; stroke-width: 1; }
+.pv-dot { fill: #3a3b40; }
+.pv-dot-hot,
+.pv-accent,
+.pv-status { fill: #e6ad56; }
+.pv-warn { fill: #c98652; }
+.pv-icon { fill: #3a3b40; }
+.pv-track { fill: #2c2e32; }
+.pv-accent-soft { fill: #e6ad5614; stroke: #e6ad5630; stroke-width: 1.5; }
+.pv-pill { fill: #282a2e; stroke: #ffffff12; stroke-width: 1; }
+.pv-icon-box { fill: #282a2e; stroke: #ffffff12; stroke-width: 1.5; }
+.pv-button { fill: #e6ad56; }
+.pv-title { fill: #f2f2f3; font-size: 14px; font-weight: 700; }
+.pv-eyebrow,
+.pv-label,
+.pv-micro { fill: #85878d; font-size: 9px; font-weight: 650; letter-spacing: 1.15px; }
+.pv-label { font-size: 10px; }
+.pv-heading { fill: #f2f2f3; font-size: 16px; font-weight: 650; }
+.pv-copy { fill: #a1a3a8; font-size: 11px; }
+.pv-copy-bright { fill: #e8e8ea; }
+.pv-metric { fill: #f2f2f3; font-size: 28px; font-weight: 700; }
+.pv-metric-sm { fill: #f2f2f3; font-size: 23px; font-weight: 700; }
+.pv-terminal { fill: #e8e8ea; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
+.pv-muted { fill: #8e9096; }
+.pv-amber { fill: #e6ad56; }
+.pv-button-copy { fill: #17181b; font-size: 9px; font-weight: 800; letter-spacing: .8px; }
+.pv-accent-stroke { fill: none; stroke: #e6ad56; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pv-flow { fill: none; stroke: #6b6d73; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.pv-chart-fill { fill: #e6ad560d; }
+.pv-chart { fill: none; stroke: #e6ad56; stroke-width: 2.5; stroke-linecap: round; }
+
+@media (min-width: 1280px) {
+  .project-card.featured {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(325px, .85fr);
+    align-items: stretch;
+  }
+
+  .project-card.featured .project-visual {
+    height: 100%;
+    min-height: 410px;
+    aspect-ratio: auto;
+    border-right: 1px solid #ffffff10;
+    border-bottom: 0;
+  }
+
+  .project-card.featured .project-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px;
+  }
+
+  .project-card.featured .project-actions {
+    margin-top: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-visual svg,
+  .visual-sheen { transition: none; }
+}
