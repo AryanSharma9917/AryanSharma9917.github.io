@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 
-export const sections = [['about', 'About'], ['projects', 'Projects'], ['skills', 'Skills'], ['experience', 'Experience'], ['opensource', 'Open source'], ['contact', 'Contact']] as const;
+export const sections = [['about', 'About'], ['projects', 'Projects'], ['skills', 'Skills'], ['experience', 'Experience'], ['contact', 'Contact']] as const;
 export type SectionId = typeof sections[number][0];
 
 export function ProfileRail({ active, menuOpen, onMenuToggle, onNavigate }: { active: string; menuOpen: boolean; onMenuToggle: () => void; onNavigate: () => void }) {

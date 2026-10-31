@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { ContactSection } from './components/ContactSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { HeroSection } from './components/HeroSection';
-import { OpenSourceSection } from './components/OpenSourceSection';
 import { ProfileRail, sections } from './components/ProfileRail';
 import { ProjectsSection } from './components/ProjectsSection';
 import { SkillsSection } from './components/SkillsSection';
@@ -48,7 +47,6 @@ function App() {
       <ProjectsSection />
       <SkillsSection />
       <ExperienceSection />
-      <OpenSourceSection />
       <ContactSection />
       <footer>© {new Date().getFullYear()} Aryan Sharma · Built with care.</footer>
     </main>

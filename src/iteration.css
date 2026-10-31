@@ -23,12 +23,10 @@ body { overflow-x: hidden; }
 
 .button svg,
 .project-actions svg,
-.detail-links svg,
-.contribution-link svg { transition: transform .2s ease; }
+.detail-links svg { transition: transform .2s ease; }
 .button:hover svg,
 .project-github:hover svg,
-.detail-links a:hover svg,
-.contribution-card:hover .contribution-link svg { transform: translate(2px,-2px); }
+.detail-links a:hover svg { transform: translate(2px,-2px); }
 
 .project-card.featured { display: block; }
 .project-summary { min-width: 0; }
@@ -126,15 +124,6 @@ body { overflow-x: hidden; }
 .experience-tech { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
 .experience-tech span { border: 1px solid #ffffff0d; border-radius: 5px; background: #242529; padding: 3px 6px; color: #96989e; font-family: ui-monospace,SFMono-Regular,Consolas,monospace; font-size: 8px; line-height: 1.25; }
 
-.contribution-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
-.contribution-card { min-width: 0; border: 1px solid var(--border); border-radius: 15px; background: var(--card); padding: 22px; transition: transform .22s, border-color .22s, box-shadow .22s; }
-.contribution-card:hover { transform: translateY(-3px); border-color: #e6ad5652; box-shadow: 0 16px 35px #0000002e; }
-.contribution-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; color: var(--accent); }
-.contribution-top span { border: 1px solid #9abe7a30; border-radius: 99px; padding: 4px 7px; color: #bdcfac; font-family: ui-monospace,SFMono-Regular,Consolas,monospace; font-size: 7px; letter-spacing: .08em; text-transform: uppercase; }
-.contribution-card small { display: block; overflow: hidden; margin-bottom: 8px; color: #85878f; font-family: ui-monospace,SFMono-Regular,Consolas,monospace; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-.contribution-card h3 { min-height: 42px; margin-bottom: 20px; font-size: 14px; line-height: 1.5; }
-.contribution-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-size: 10px; }
-
 @media (min-width: 900px) {
   .project-slot.expanded .project-summary { display: grid; grid-template-columns: minmax(0,1fr) minmax(340px,.82fr); align-items: stretch; }
   .project-slot.expanded .project-visual { height: 100%; min-height: 340px; aspect-ratio: auto; border-right: 1px solid #ffffff10; border-bottom: 0; }
@@ -150,8 +139,7 @@ body { overflow-x: hidden; }
   .project-details-content { padding: 22px 18px; }
   .case-narrative,
   .detail-grid,
-  .media-grid,
-  .contribution-grid { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: 1fr; }
   .detail-workflow { flex-wrap: wrap; row-gap: 12px; }
   .detail-grid-footer { grid-template-columns: 1fr; }
   .timeline article { grid-template-columns: 29px 1fr; gap: 12px; }
